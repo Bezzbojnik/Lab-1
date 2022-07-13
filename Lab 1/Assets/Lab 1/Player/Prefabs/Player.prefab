@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3369572461852724976}
   - component: {fileID: 2963467299673498077}
+  - component: {fileID: 8657594020659477938}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -49,6 +50,19 @@ MonoBehaviour:
   RotateObject: {fileID: 7063789719784259215}
   Bullet: {fileID: 1082007496665377351, guid: b0598dce7f3ff494baf2e75525f53419, type: 3}
   BulletPosition: {fileID: 3942931278741018339}
+--- !u!114 &8657594020659477938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055868783495073881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0bad74ff0f0b24e963118a0d1ae9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 5
 --- !u!1 &7063789719784259215
 GameObject:
   m_ObjectHideFlags: 0

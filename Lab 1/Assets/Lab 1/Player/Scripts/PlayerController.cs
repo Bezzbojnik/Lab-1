@@ -31,9 +31,6 @@ public class PlayerController : MonoBehaviour
             var bullet = Instantiate(Bullet, BulletPosition);
 
             bullet.transform.Rotate(Vector3.up, RotateObject.transform.rotation.eulerAngles.y);
-
-            //Vector3 rotateShoot = TestCube.transform.position - RotateObject.transform.position;
-            //bullet.GetComponent<Rigidbody>().AddForce(rotateShoot.normalized * 50, ForceMode.Impulse);
         }
     }
 }

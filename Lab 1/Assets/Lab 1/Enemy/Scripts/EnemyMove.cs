@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    private float _speed = 1f;
+    private float _speed = 5f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         transform.position = transform.position + transform.forward * Time.deltaTime * _speed;
