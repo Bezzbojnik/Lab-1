@@ -7,8 +7,8 @@ public class BulletCollider : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+            other.gameObject.GetComponent<EnemyCollider>().DestroyEnemy();
             UIManager.OnReduceEnemy?.Invoke();
-            Destroy(other.gameObject);
             Destroy(gameObject);
         }
         else

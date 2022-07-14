@@ -41,6 +41,13 @@ public class UIManager : MonoBehaviour
         OnReduceHealth -= ReduceHealth;
     }
 
+    public void OnLose()
+    {
+        UILosePanelScript.LosePanel.SetActive(true);
+        OnReduceEnemy -= ReduceEnemy;
+        OnReduceHealth -= ReduceHealth;
+    }
+
     private void ReduceEnemy()
     {
         _enemyCount--;
@@ -57,9 +64,7 @@ public class UIManager : MonoBehaviour
         UIHealthScript.HealthText.text = _health.ToString();
         if(_health == 0)
         {
-            UILosePanelScript.LosePanel.SetActive(true);
-            OnReduceEnemy -= ReduceEnemy;
-            OnReduceHealth -= ReduceHealth;
+            OnLose();
         }
     }
 }

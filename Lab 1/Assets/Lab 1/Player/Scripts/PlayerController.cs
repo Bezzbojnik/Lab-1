@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static Action OnShoot;
+
     public GameObject TestCube;
     public GameObject RotateObject;
     public GameObject Bullet;
@@ -29,8 +32,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             var bullet = Instantiate(Bullet, BulletPosition);
-
             bullet.transform.Rotate(Vector3.up, RotateObject.transform.rotation.eulerAngles.y);
+
+            OnShoot?.Invoke();
         }
     }
 }
